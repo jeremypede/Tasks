@@ -1,0 +1,44 @@
+#Container
+	{
+	width: 800px;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	}
+	
+#Header
+	{
+	height: auto;
+	width: 100%;
+	Color:#3498DB;
+	position: relative;
+	border-bottom: 1px solid #fff;
+	}
+	
+#Menu {#Menu li a:hover
+	{
+	text-decoration: none;
+	Color:#3498DB;
+	background-color: #3498DB;
+	}
+	
+#MainBody
+	{
+	float: left;
+	width: 430px;
+	margin: 0 0 0 20px;
+	Color:#3498DB;
+	}
+
+#Footer
+	{
+	clear: both;
+	color: #272900;
+	text-align: right;
+	margin: 0 0 0 20px;
+	font-size: 90%;
+	padding: 5px;
+	background-color: #b9b992;
+	padding: 5px;
+	}
+
