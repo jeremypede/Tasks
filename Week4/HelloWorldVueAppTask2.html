@@ -1,0 +1,20 @@
+<html>
+<body>
+<div id="example">
+<p>{{ hello }}</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+<script>
+new Vue({
+el: '#example',
+data: { hello: 'Hello World!' }
+})
+  
+
+</script>
+  
+<h3 v-if="great">You are great!</h3>
+<h3 v-else>Sorry, you are not so great</h3>
+  
+</body>
+</html>
