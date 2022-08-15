@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<title>Document</title>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+
+</head>
+
+<body>
+
+<div id="app1">
+<select v-model="selected">
+  <option disabled value="">Please select one from the dropdown list</option>
+  <option>Option A</option>
+  <option>Option B</option>
+  <option>Option C</option>
+</select>
+<span>Selected: {{ selected }}</span>
+</div>
+
+<script>
+var app1= new Vue({
+  el: "#app1",
+  data: {
+    selected: []
+  }
+})
+</script>
+
+</body>
+</html>
+
+
+
