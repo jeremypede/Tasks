@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<title>Document</title>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+
+</head>
+
+<body>
+<div id="app">
+<custom-article v-bind:content="datacontent"></custom-article>
+</div>
+
+<script>
+Vue.component('custom-article', {
+props: ['content'],
+template: '<article>{{content}}</article>'
+})
+new Vue({
+el: '#app',
+data: {
+datacontent: 'This component was produced using a data object in the Vue instance and rendered using prop'}
+})
+</script>
+
+</body>
+</html>
+
+
+
