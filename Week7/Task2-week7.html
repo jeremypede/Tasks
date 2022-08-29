@@ -9,19 +9,31 @@
 </head>
 
 <body>
-<div id="app">
-<custom-article v-bind:content="datacontent"></custom-article>
-</div>
+<div id="app-1">
+  <ol>
+      <todo-item
+      v-for="item in groceryList"
+      v-bind:todo="item"
+      v-bind:key="item.id"
+      ></todo-item>
+  </ol>
 
 <script>
-Vue.component('custom-article', {
-props: ['content'],
-template: '<article>{{content}}</article>'
+Vue.component('todo-item', {
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>'
 })
-new Vue({
-el: '#app',
-data: {
-datacontent: 'This component was produced using a data object in the Vue instance and rendered using prop'}
+
+var app1 = new Vue({
+  el: '#app-1',
+  data: {
+    groceryList: [
+      { id: 0, text: 'Milk' },
+      { id: 1, text: 'Bread' },
+      { id: 2, text: 'Bananas' }
+      
+    ]
+  }
 })
 </script>
 
