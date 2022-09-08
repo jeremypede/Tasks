@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>
+		Creating Search Bar using HTML
+		CSS and Javascript
+	</title>
+	
+	</head>
+
+
+
+<body>
+	
+	<!-- input tag -->
+	<input id="searchbar" onkeyup="search_room()" type="text"
+		name="search" placeholder="Search for rooms..">
+	
+	<!-- ordered list -->
+	<ol id='list'>
+		<li class="room">Room One</li>
+		<li class="room">Room Two</li>
+	</ol>
+		
+</body>
+
+<script>
+
+  // JavaScript code
+function search_room() {
+  let input = document.getElementById('searchbar').value
+  input=input.toLowerCase();
+  let x = document.getElementsByClassName('room');
+  
+  for (i = 0; i < x.length; i++) {
+    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+      x[i].style.display="none";
+    }
+    else {
+      x[i].style.display="list-item";				
+    }
+  }
+}
+
+</script>
+
+
+
+</html>
