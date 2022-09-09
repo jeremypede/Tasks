@@ -90,22 +90,33 @@ img {
 	<div id="Menu"><b><a href="index.html">Home</a> | <a href="rooms.html">Rooms</a> | <a href="contact.html">Contact</a></b>
 	</div>
 
-<form>
-	<input type="text" name="text" class="search" placeholder="Search Here">
-	<input type="submit" name="submit" class="id submit" value="Search">
-</form>
+
+<div id="rooms-list"> <!-- added by Shang -->
+<!-- input tag -->
+	<input id="searchbar" onkeyup="search_room()" type="text"
+		name="search" placeholder="Search for rooms..">
+	
+	<!-- ordered list -->
+	<ol id='list'>
+		<li class="room">Room One</li>
+		<li class="room">Room Two</li>
+	</ol>
+
 	
 	<div id="MainBody"><p><h4 style="Color:#3498DB">OUR ROOMS</h4></div>
 
 
-<div id="rooms-list">
-<h2>{{header}}</h2>
+<!-- <div id="rooms-list"> commented out by Shang -->
+	<h2>{{header}}</h2>
 
-<ul>
-     <li v-for="room in rooms" :key="room.id">{{room.text}}</li>
-</ul>
+	<ul>
+		 <li v-for="room in rooms" :key="room.id">{{room.text}}</li>
+	</ul>
 
 </div>
+
+
+
 <!--
 <script src=https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js></script>
 -->
@@ -115,15 +126,15 @@ img {
 /*
             const roomsapp = Vue.createApp({
             data () {
-            return {
-            header: 'Rooms on offer',
-            
-            rooms: [
-            
-            "Room One",
-            "Room Two",
-            ]
-            }
+				return {
+				header: 'Rooms on offer',
+				
+				rooms: [
+				
+				"Room One",
+				"Room Two",
+				]
+				}
             }
             }).mount('#rooms-list')
 */
@@ -133,16 +144,45 @@ var roomsapp = new Vue({
 	data:{
 		header: 'Rooms on offer',
 		rooms: [            
-            {id: 1, text:"Room One"},
-            {id: 2, text:"Room Two"},
-            ],
+				{id: 1, text:"Room One"},
+				{id: 2, text:"Room Two"},
+        ],
 	},
 
 })
 
+  // JavaScript code
+function search_room() {
+  let input = document.getElementById('searchbar').value
+  input=input.toLowerCase();
+  let x = document.getElementsByClassName('room');
+  
+  for (i = 0; i < x.length; i++) {
+    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+      x[i].style.display="none";
+    }
+    else {
+      x[i].style.display="list-item";				
+    }
+  }
+  
+  //Room search by room one or room two
+  let y = document.getElementsByTagName('fieldset');
+  
+  for (i = 0; i < y.length; i++) {
+    if (!y[i].title.toLowerCase().includes(input)) {
+      y[i].style.display="none";
+    }
+    else {
+      y[i].style.display="list-item";				
+    }
+  }
+}
+
+
 </script>
 	
-<fieldset>
+<fieldset title="Room One">
 	<p>
 	<img src="images/loungeone.png" alt="Room One">
 	<h2 style="Color:#3498DB">Room One</h2>
@@ -167,9 +207,9 @@ var roomsapp = new Vue({
 <button type="button" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%"> Book Now </button> <br>
 
 <h4 style="color:red;" align="center">Pricing: $250 per night, minimum two night stay</h4>
+</fieldset>
 
-
-<fieldset>
+<fieldset title="Room Two">
 	<p>
 <img src="images/loungetwo.png" alt="Room Two"> 
 <h2 style="Color:#3498DB">Room Two</h2>
@@ -194,7 +234,7 @@ var roomsapp = new Vue({
 <button type="button" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%"> Book Now </button> <br>  
 
 <h4 <h4 style="color:red;" align="center">Pricing: $150 per night, minimum two night stay</h4>
-
+</fieldset>
 
 </body>
 </html>
