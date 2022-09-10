@@ -91,7 +91,7 @@ img {
 	</div>
 
 
-<div id="rooms-list"> <!-- added by Shang -->
+<div id="rooms-list"> 
 <!-- input tag -->
 	<input id="searchbar" onkeyup="search_room()" type="text"
 		name="search" placeholder="Search for rooms..">
@@ -106,7 +106,7 @@ img {
 	<div id="MainBody"><p><h4 style="Color:#3498DB">OUR ROOMS</h4></div>
 
 
-<!-- <div id="rooms-list"> commented out by Shang -->
+<!-- <div id="rooms-list"> commented out by  -->
 	<h2>{{header}}</h2>
 
 	<ul>
@@ -204,7 +204,8 @@ function search_room() {
         <li>High quaility European linen and towels</li>
 </ul> 
 
-<button type="button" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%"> Book Now </button> <br>
+<input type="button" value="Book Now" onClick="alert('You are about to book a room. Are you sure?');" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%"/>
+
 
 <h4 style="color:red;" align="center">Pricing: $250 per night, minimum two night stay</h4>
 </fieldset>
@@ -231,7 +232,7 @@ function search_room() {
         <li>High quaility European linen and towels</li>
 </ul>  
 
-<button type="button" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%"> Book Now </button> <br>  
+<input type="button" value="Book Now" onClick="alert('You are about to book a room. Are you sure?');" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%"/>
 
 <h4 <h4 style="color:red;" align="center">Pricing: $150 per night, minimum two night stay</h4>
 </fieldset>
