@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+
 <style>
 h4 {
 	background-color: #e1e1d0;
@@ -60,11 +63,11 @@ input, textarea {margin-top: 10px;
 <form id="contactus">
 <fieldset>
  <legend>Contact Us:</legend>
-		First Name: <br><input type="text"><br>
-		Last Name:  <br><input type="text"><br>
-		Address:    <br><input type="text"><br>
+		First Name: <br><input type="text" required><br>
+		Last Name:  <br><input type="text" required><br>
+		Address:    <br><input type="text" required><br>
 		Phone:      <br><input type="text"><br>
-		Email::     <br><input type="email"><br>
+		Email::     <br><input type="email" required><br>
 		Comments:   <br><textarea name="comment">Please place your comment here</textarea>
 </fieldset>
 
@@ -75,9 +78,15 @@ input, textarea {margin-top: 10px;
 		<input type="reset" value="Clear the Form">
 		</div><br>
 
-
 </form>
-		
+
 </div>
+
+<script>
+
+
+</script>
+
+
 </body>
 </html>

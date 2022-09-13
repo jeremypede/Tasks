@@ -38,6 +38,12 @@ img {
     margin: 0 auto;
 	}
 
+	.responsive {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
 /* For mobile phones: */
 [class*="col-"] {
   width: 100%;
@@ -100,6 +106,10 @@ img {
 	<ol id='list'>
 		<li class="room">Room One</li>
 		<li class="room">Room Two</li>
+		<li class="room">Room Three</li>
+		<li class="room">Room Four</li>
+		<li class="room">Room Five</li>
+		<li class="room">Room Six</li>
 	</ol>
 
 	
@@ -146,6 +156,10 @@ var roomsapp = new Vue({
 		rooms: [            
 				{id: 1, text:"Room One"},
 				{id: 2, text:"Room Two"},
+				{id: 1, text:"Room Three"},
+				{id: 1, text:"Room Four"},
+				{id: 1, text:"Room Five"},
+				{id: 1, text:"Room Six"},
         ],
 	},
 
@@ -184,11 +198,11 @@ function search_room() {
 	
 <fieldset title="Room One">
 	<p>
-	<img src="images/loungeone.png" alt="Room One">
+	<img src="images/loungeone.png" alt="Room One" class="responsive">
 	<h2 style="Color:#3498DB">Room One</h2>
 
 	<p>
-	Our two-bedroom, one-bathroom, fully self-contained rooms offer contemporary design with Smart TV. A fully equipped kitchen, dining, private balcony and BBQ overlooking our         		manicured grounds. Wake up relaxed and refreshed after a restful nights sleep in the comfort of either the queen bedroom or second bedroom with two single beds, ideal for small        	families or  couples. With stunning views of acreage gardens, diverse native wildlife and views over Bancroft Bay, this delightful room creates a soothing ambience that is perfect         	for your next tranquil country getaway.</p>
+	Our one-bedroom, one-bathroom, fully self-contained rooms offer contemporary design with Smart TV. A fully equipped kitchen, dining, private balcony and BBQ overlooking our         		manicured grounds. Wake up relaxed and refreshed after a restful nights sleep in the comfort of either the queen bedroom or second bedroom with two single beds, ideal for small        	families or  couples. With stunning views of acreage gardens, diverse native wildlife and views over Bancroft Bay, this delightful room creates a soothing ambience that is perfect         	for your next tranquil country getaway.</p>
 	<p>
 
 <h4>Inside our rooms you will find:</h4>
@@ -212,11 +226,119 @@ function search_room() {
 
 <fieldset title="Room Two">
 	<p>
-<img src="images/loungetwo.png" alt="Room Two"> 
+<img src="images/loungetwo.png" alt="Room Two" class="responsive"> 
 <h2 style="Color:#3498DB">Room Two</h2>
 
 	<p>
-	Our one-bedroom, one-bathroom, fully self-contained rooms offer contemporary design with Smart TV. A fully equipped kitchen, dining, private balcony and BBQ overlooking our                  manicured grounds. Wake up relaxed and refreshed after a restful nights sleep in the comfort of either the queen bedroom or second bedroom with two single beds, ideal for small              families or  couples. With stunning views of acreage gardens, diverse native wildlife and views over Bancroft Bay, this delightful room creates a soothing ambience that is perfect           for your next tranquil country getaway.</p>
+	Our two-bedroom, one-bathroom, fully self-contained rooms offer contemporary design with Smart TV. A fully equipped kitchen, dining, private balcony and BBQ overlooking our                  manicured grounds. Wake up relaxed and refreshed after a restful nights sleep in the comfort of either the queen bedroom or second bedroom with two single beds, ideal for small              families or  couples. With stunning views of acreage gardens, diverse native wildlife and views over Bancroft Bay, this delightful room creates a soothing ambience that is perfect           for your next tranquil country getaway.</p>
+	<p>
+
+<h4>Inside our rooms you will find:</h4>
+
+<ul>
+	<li>Split system heating and air conditioning</li>
+	<li>Open plan living</li>
+	<li>Open gas fire place</li>
+	<li>Coffee machine</li>
+	<li>High-speed WI-FI</li>
+        <li>Heated towel rails</li>
+        <li>Complimentary toiletries</li>
+        <li>High quaility European linen and towels</li>
+</ul>  
+
+<input type="button" value="Book Now" onClick="alert('You are about to book a room. Are you sure?');" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%"/>
+
+<h4 <h4 style="color:red;" align="center">Pricing: $200 per night, minimum two night stay</h4>
+</fieldset>
+
+<fieldset title="Room Three">
+	<p>
+<img src="images/loungethree.png" alt="Room Three" class="responsive"> 
+<h2 style="Color:#3498DB">Room Three</h2>
+
+	<p>
+	Our three-bedroom, one-bathroom, fully self-contained rooms offer contemporary design with Smart TV. A fully equipped kitchen, dining, private balcony and BBQ overlooking our                  manicured grounds. Wake up relaxed and refreshed after a restful nights sleep in the comfort of either the queen bedroom or second bedroom with two single beds, ideal for small              families or  couples. With stunning views of acreage gardens, diverse native wildlife and views over Bancroft Bay, this delightful room creates a soothing ambience that is perfect           for your next tranquil country getaway.</p>
+	<p>
+
+<h4>Inside our rooms you will find:</h4>
+
+<ul>
+	<li>Split system heating and air conditioning</li>
+	<li>Open plan living</li>
+	<li>Open gas fire place</li>
+	<li>Coffee machine</li>
+	<li>High-speed WI-FI</li>
+        <li>Heated towel rails</li>
+        <li>Complimentary toiletries</li>
+        <li>High quaility European linen and towels</li>
+</ul>  
+
+<input type="button" value="Book Now" onClick="alert('You are about to book a room. Are you sure?');" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%"/>
+
+<h4 <h4 style="color:red;" align="center">Pricing: $180 per night, minimum two night stay</h4>
+</fieldset>
+
+<fieldset title="Room Four">
+	<p>
+<img src="images/loungefour.png" alt="Room Four" class="responsive"> 
+<h2 style="Color:#3498DB">Room Four</h2>
+
+	<p>
+	Our four-bedroom, one-bathroom, fully self-contained rooms offer contemporary design with Smart TV. A fully equipped kitchen, dining, private balcony and BBQ overlooking our                  manicured grounds. Wake up relaxed and refreshed after a restful nights sleep in the comfort of either the queen bedroom or second bedroom with two single beds, ideal for small              families or  couples. With stunning views of acreage gardens, diverse native wildlife and views over Bancroft Bay, this delightful room creates a soothing ambience that is perfect           for your next tranquil country getaway.</p>
+	<p>
+
+<h4>Inside our rooms you will find:</h4>
+
+<ul>
+	<li>Split system heating and air conditioning</li>
+	<li>Open plan living</li>
+	<li>Open gas fire place</li>
+	<li>Coffee machine</li>
+	<li>High-speed WI-FI</li>
+        <li>Heated towel rails</li>
+        <li>Complimentary toiletries</li>
+        <li>High quaility European linen and towels</li>
+</ul>  
+
+<input type="button" value="Book Now" onClick="alert('You are about to book a room. Are you sure?');" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%"/>
+
+<h4 <h4 style="color:red;" align="center">Pricing: $165 per night, minimum two night stay</h4>
+</fieldset>
+
+<fieldset title="Room Five">
+	<p>
+<img src="images/loungefive.png" alt="Room Five" class="responsive"> 
+<h2 style="Color:#3498DB">Room Five</h2>
+
+	<p>
+	Our five-bedroom, one-bathroom, fully self-contained rooms offer contemporary design with Smart TV. A fully equipped kitchen, dining, private balcony and BBQ overlooking our                  manicured grounds. Wake up relaxed and refreshed after a restful nights sleep in the comfort of either the queen bedroom or second bedroom with two single beds, ideal for small              families or  couples. With stunning views of acreage gardens, diverse native wildlife and views over Bancroft Bay, this delightful room creates a soothing ambience that is perfect           for your next tranquil country getaway.</p>
+	<p>
+
+<h4>Inside our rooms you will find:</h4>
+
+<ul>
+	<li>Split system heating and air conditioning</li>
+	<li>Open plan living</li>
+	<li>Open gas fire place</li>
+	<li>Coffee machine</li>
+	<li>High-speed WI-FI</li>
+        <li>Heated towel rails</li>
+        <li>Complimentary toiletries</li>
+        <li>High quaility European linen and towels</li>
+</ul>  
+
+<input type="button" value="Book Now" onClick="alert('You are about to book a room. Are you sure?');" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%"/>
+
+<h4 <h4 style="color:red;" align="center">Pricing: $160 per night, minimum two night stay</h4>
+</fieldset>
+
+<fieldset title="Room Six">
+	<p>
+<img src="images/loungesix.png" alt="Room Six" class="responsive"> 
+<h2 style="Color:#3498DB">Room Six</h2>
+
+	<p>
+	Our six-bedroom, one-bathroom, fully self-contained rooms offer contemporary design with Smart TV. A fully equipped kitchen, dining, private balcony and BBQ overlooking our                  manicured grounds. Wake up relaxed and refreshed after a restful nights sleep in the comfort of either the queen bedroom or second bedroom with two single beds, ideal for small              families or  couples. With stunning views of acreage gardens, diverse native wildlife and views over Bancroft Bay, this delightful room creates a soothing ambience that is perfect           for your next tranquil country getaway.</p>
 	<p>
 
 <h4>Inside our rooms you will find:</h4>
